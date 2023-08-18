@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- child selectorworks on immediate child only-->
+        <!--this is decedent selector-->
+        <!--universal selector-->
+        <!--adjacent selector-->
+        <!--class, id selector-->
+        <!--type selector (,)-->
+
+    <style>
+        #first{
+            color: green;
+            font-size: 4rem;
+        }
+        .first{
+            color: red;
+            font-size: 60px;
+        }
+        li > p{
+            color: blue;
+        }
+        ul p{
+            color:orange;
+        }
+        h1+h2{
+            color: yellow;
+        }
+        
+        * {
+            color: aqua;
+        }
+        h1, h2{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="first">this is first paragraph</p>
+    <p class="first">this is second paragraph</p>
+    <h1>hello</h1>
+    <h2>world</h2>
+    <ul>
+        <li>
+            <p>this is third paragraph</p>
+        </li>
+    </ul>
+</body>
+</html>
