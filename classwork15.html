@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        h1{
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        .slides{
+            height: 500px;
+            width: 500px;
+            background-image: url('https://images.pexels.com/photos/14339802/pexels-photo-14339802.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load');
+            position: absolute;
+            transform: translate(110%);
+            animation: slide 10s infinite linear;
+            box-sizing: border-box;
+            box-shadow: 4px 4px 20px white;
+        }
+        @keyframes slide{
+            0%{
+            background-image: url('img/img4.jpg');
+            }
+            25%{
+                background-image: url('img/img3.jpg');
+            }
+            50%{
+                background-image: url('img/img2.jpg');
+            }
+            75%{
+                background-image: url('img/img1.jpg');
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>slildes using css</h1>
+    <div class="slides">
+
+    </div>
+</body>
+</html>
