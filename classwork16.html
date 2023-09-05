@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            display: grid;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            margin: auto;
+            display: grid;
+            place-items: center;
+        }
+        .slide-container{
+            display: flex;
+            width: 500px;
+            animation: slide 20s infinite linear;
+        }
+        @keyframes slide{
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-2000px);
+            }
+        }
+        .slide-image{
+            padding: 20px;
+            perspective: 100px;
+
+
+        }
+        .slide-image img{
+            width: 500px;
+            height: 500px;
+            padding: 20px;
+            transition: transform 1s;
+        }
+         img:hover{
+            transform: translateZ(20px);   
+        }
+    </style> 
+</head>
+<body>
+    <div class="container">
+        <div class="slide-container">
+            <div class="slide-image">
+                <img src="img/img1.jpg" alt="">
+            </div>
+            <div class="slide-image">
+                <img src="img/img2.jpg" alt="">
+            </div>
+            <div class="slide-image">
+                <img src="img/img3.jpg" alt="">
+            </div>
+            <div class="slide-image">
+                <img src="img/img4.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
