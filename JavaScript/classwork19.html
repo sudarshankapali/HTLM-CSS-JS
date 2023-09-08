@@ -19,6 +19,7 @@
     <button id="" onclick="add()">Add</button>
     <button id="" onclick="sub()">Subtract</button>
     <button id="" onclick="mul()">Multiply</button>
+    <button id="" onclick="div()">Divide</button>
     <div id="para">
 
     </div>
@@ -52,6 +53,16 @@
             var sum = a * b;
             document.getElementById("result").value = sum;
             console.log(a*b);
+            document.getElementById("para").innerHTML = sum;
+        }
+        function div(){
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            a = parseInt(a);
+            b = parseInt(b);
+            var sum = a / b;
+            document.getElementById("result").value = sum;
+            console.log(a/b);
             document.getElementById("para").innerHTML = sum;
         }
     </script>
