@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Climate+Crisis&family=Edu+NSW+ACT+Foundation&family=Roboto+Condensed:wght@700&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background: url('https://source.unsplash.com/random')center;
+        }
+            .Heading{
+                text-align: center;
+            }
+            .container{
+                /* border: 2px dotted red; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* margin-top: 10%; */
+                margin-left: 42%;
+                margin-right: 42%;
+                padding-top: 5%;
+                padding-bottom: 5%;
+                background-color: gray;
+                border: 3px solid black;
+            }
+            #display{
+                height: 50px;
+                padding: 0%;
+                border: 3px solid black;
+            }
+            .btn{
+                font-family: 'Bree Serif', serif;
+                border-radius: 3px;
+                height: 35px;
+                width: 35px;
+            }
+    </style>
+</head>
+<body>
+    <h1 class="Heading">Calculator using HTML,CSS and JS</h1>
+    <div class="container">
+        <input type="text" id="display">
+        <br>
+        <div class="row">
+            <button class="btn" onclick="write7()">7</button>
+            <button class="btn" onclick="write8()">8</button>
+            <button class="btn" onclick="write9()">9</button>
+            <button class="btn" onclick="mul()">x</button>
+        </div>
+        <div class="row">
+            <button class="btn" onclick="write4()">4</button>
+            <button class="btn" onclick="write5()">5</button>
+            <button class="btn" onclick="write6()">6</button>
+            <button class="btn" onclick="">/</button>
+        </div>
+        <div class="row">
+            <button class="btn" onclick="write1()">1</button>
+            <button class="btn" onclick="write2()">2</button>
+            <button class="btn" onclick="write3()">3</button>
+            <button class="btn" onclick="add()">+</button>
+        </div>
+        <div class="row">
+            <button class="btn" onclick="write0()">0</button>
+            <button class="btn">.</button>
+            <button class="btn" onclick="equalsTo()">=</button>
+            <button class="btn" onclick="sub()">-</button>
+        </div>
+    </div>
+    <script>
+        var firstValue,secondValue;
+        let operator = "";
+        function write7(){
+            let a = "";
+            let b = "7";
+            a = document.getElementById("display").value;
+            document.getElementById("display").value = (a+b);
+            // console.log(a+b);
+        }
+        function write8(){
+            let a = "";
+            let b = "8";
+            a = document.getElementById("display").value;
+            document.getElementById("display").value = (a+b);
+            // console.log(a+b);
+        }
+        function write9(){
+            let a = "";
+            let b = "9";
+            a = document.getElementById("display").value;
+            document.getElementById("display").value = (a+b);
+            // console.log(a+b);
+        }
+        function write4(){
+            let a = "";
+            let b = "4";
+            a = document.getElementById("display").value;
+            document.getElementById("display").value = (a+b);
+            // console.log(a+b);
+        }
+        function write5(){
+            let a = "";
+            let b = "5";
+            a = document.getElementById("display").value;
+            document.getElementById("display").value = (a+b);
+            // console.log(a+b);
+        }
+        function write6(){
+            let a = "";
+            let b = "6";
+            a = document.getElementById("display").value;
+            document.getElementById("display").value = (a+b);
+            // console.log(a+b);
+        }
+        function write1(){
+            let a = "";
+            let b = "1";
+            a = document.getElementById("display").value;
+            document.getElementById("display").value = (a+b);
+            // console.log(target.value);
+        }
+        function write2(){
+            let a = "";
+            let b = "2";
+            a = document.getElementById("display").value;
+            document.getElementById("display").value = (a+b);
+            // console.log(a+b);
+        }
+        function write3(){
+            let a = "";
+            let b = "3";
+            a = document.getElementById("display").value;
+            document.getElementById("display").value = (a+b);
+            // console.log(a+b);
+        }
+        function write0(){
+            let a = "";
+            let b = "0";
+            a = document.getElementById("display").value;
+            document.getElementById("display").value = (a+b);
+            // console.log(a+b);
+        }
+        function add(){
+            firstValue = document.getElementById("display").value;
+            document.getElementById("display").value = "";
+            operator = "+";
+        }
+        function sub(){
+            firstValue = document.getElementById("display").value;
+            document.getElementById("display").value = "";
+            operator = "-";
+        }
+        function mul(){
+            firstValue = document.getElementById("display").value;
+            document.getElementById("display").value = "";
+            operator = "*";
+        }
+        function equalsTo(){
+            secondValue = parseInt(document.getElementById("display").value);
+            firstValue = parseInt(firstValue);
+            if(operator == "+"){
+                document.getElementById("display").value = (firstValue + secondValue);
+            }
+            if(operator == "-")
+            {
+                secondValue = parseInt(document.getElementById("display").value);
+                firstValue = parseInt(firstValue);
+                document.getElementById("display").value = (firstValue - secondValue);
+            }
+            if(operator == "*")
+            {
+                secondValue = parseInt(document.getElementById("display").value);
+                firstValue = parseInt(firstValue);
+                document.getElementById("display").value = (firstValue * secondValue);
+            }
+        }
+    </script>
+</body>
+</html>
