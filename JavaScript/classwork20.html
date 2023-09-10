@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    first
+    <input type="text" id="first">
+    <br>
+    second
+    <input type="text" id="second">
+    <br>
+    third
+    <input type="text" id="third">
+    <br>
+    result
+    <input type="text" id="result" readonly>
+    <button onclick="compare()">compare</button>
+    <script>
+        var a,b,c;
+        function compare(){
+            a = parseInt(document.getElementById("first").value);
+            // b = parseInt(document.getElementById("second").value);
+            // c = parseInt(document.getElementById("third").value);
+            // if(a>b && a>c){
+            //     document.getElementById("result").value = a;
+            // }else if(b>a && b>c){
+            //     document.getElementById("result").value = b;
+            // }
+            // else{
+            //     document.getElementById("result").value = (c);
+            // }
+            switch(a){
+                case 1:{
+                    document.getElementById("result").value = "Sunday";
+                    break;
+                }
+                case 2:{
+                    document.getElementById("result").value = "Monday";
+                    break;
+                }
+                case 3:{
+                    document.getElementById("result").value = "Tuesday";
+                    break;
+                }
+                case 4:{
+                    document.getElementById("result").value = "Wednesday";
+                    break;
+                }
+                case 5:{
+                    document.getElementById("result").value = "Thursday";
+                    break;
+                }
+                case 6:{
+                    document.getElementById("result").value = "Friday";
+                    break;
+                }
+                case 7:{
+                    document.getElementById("result").value = "Saturday";
+                    break;
+                }
+                default:{
+                    document.getElementById("resutl").value = "invalid";
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
