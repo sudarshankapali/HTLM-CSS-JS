@@ -12,22 +12,25 @@
     <input type="text" name="" id="second" readonly >
     <button id="b2" onclick="random2()">player2</button>
     <br>
-    <button id="res" onclick="winner()">result</button>
+    <!-- <button id="res" onclick="winner()">result</button> -->
+    <br><p id="re"></p>
     <script>
         function random1(){
             document.getElementById("first").value = parseInt((Math.random()*1000));
+            winner();
         }
         function random2(){
             document.getElementById("second").value = parseInt((Math.random()*1000));
+            winner();
         }
         function winner(){
             var a = document.getElementById("first").value;
             var b = document.getElementById("second").value;
             if(a>b){
-                document.getElementById("first").value = "winner";
+                document.getElementById("re").innerHTML = "player1 is winner";
             }
             else{
-                document.getElementById("second").value = "winner";
+                document.getElementById("re").innerHTML = "player2 is winner";
             }
         }
     </script>
