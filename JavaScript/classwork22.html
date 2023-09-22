@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork</title>
+</head>
+<body>
+    <h1>Multiply of a number up to 20</h1>
+    <input type="text" id="inp" placeholder="Enter a number to multiply">
+    <button onclick="mul()">multiply</button>
+    <div id="res"></div>
+
+    <script>
+        function mul(){
+            var i;
+        var a = parseInt(document.getElementById("inp").value);
+        for(i=1;i<=20;i++){
+            document.getElementById("res").innerHTML+= (a + "*" + i + "=" + (i*a) + "<br />");;
+        }
+        }
+    </script>
+</body>
+</html>
