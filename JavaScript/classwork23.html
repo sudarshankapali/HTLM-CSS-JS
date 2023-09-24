@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+</head>
+<body>
+    Username:
+    <input type="text" id="username">
+    <br>
+    Password:
+    <input type="text" id="password">
+    <br>
+    <button onclick="val()">login</button>
+    <script>
+
+        // function val(){
+        //     var un = document.getElementById("username").value;
+        // let p = document.getElementById("password").value;
+
+        // if(un.length<4){
+        //     alert("username length is not valid");
+        //     un.value = " ";
+        // }
+        // if(p.length<6){
+        //     alert("Password length is not valid");
+        //     document.getElementById("password").value = "";
+        //     document.getElementById("password").style.border = "2px solid red";
+        //     p.style.border = "solid 2px red";
+        //     // p.value = " ";
+        // }
+        // }
+        // alert("message");
+        // prompt("type y or n");
+        function val() {
+    var un = document.getElementById("username");
+    var p = document.getElementById("password");
+
+    if (un.length < 4) {
+        alert("Username length is not valid");
+        p.value = "";
+    }
+    if (p.value.length < 6) {
+        alert("Password length is not valid");
+        p.value = "";
+        p.style.border = "2px solid red";
+    }
+}
+
+    </script>
+</body>
+</html>
