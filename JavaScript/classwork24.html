@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email validation</title>
+</head>
+<body>
+    email 
+    <input type="email" id="email1">
+    <br>
+    <button onclick="ok()">submit</button>
+    <script>
+        
+        function ok(){
+            var check =  /^([a-zA-Z0-9\.]+)@([a-z0-9]+.)([a-z]+)(.[a-z]?)$/;
+            var em = document.getElementById("email1").value;
+            if(check.test(em)){
+                alert("valid");
+                return true;
+            }
+            else{
+                alert("invalid");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
