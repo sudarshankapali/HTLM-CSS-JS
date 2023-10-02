@@ -10,12 +10,12 @@
     <input type="text" id="username">
     <br>
     phone number 
-    <input type="text" id="phone">
+    <input type="password" id="phone">
     <br>
     <button onclick="validatee()">submit</button>
     <script>
         var un = /^([a-z0-9]+)$/;
-        var ph = /^([0-9]+)$/;
+        var ph = /^([0-9]+).{10}$/;
         function validatee(){
             var a = document.getElementById("username").value;
             var b = document.getElementById("phone").value;
