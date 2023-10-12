@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,15 +11,41 @@
     <input type="text" name="" id="ok">
     <button onclick="check()">submit</button>
     <script>
-        let exp = /^[?=*A-Z][?=*a-z][?=*0-9][?=**?/-]$/;
-        let check = document.getElementById("ok").value;
+        // let exp = /^([?=.*A-Z])([?=.*a-z])([?=.*0-9])([?=.**?/-])([A-Za-z0-9*?/-]*)$/;
+       let exp =  /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[*/?\\-]).*$/;
+        let check1 = document.getElementById("ok").value;
         function check(){
-            if(exp.test(check)){
+            if(exp.test(check1)){
             alert("ok");
         }
         else{
             alert("not ok");
         }
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expression</title>
+</head>
+<body>
+    <input type="text" name="" id="ok">
+    <button onclick="check()">submit</button>
+    <script>
+        function check() {
+            // let exp = /^([?=.*A-Z])([?=.*a-z])([?=.*0-9])([?=.**?/-])([A-Za-z0-9*?/-]*)$/;
+            let exp = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[*/?\\-]).{8,}$/;
+            let check1 = document.getElementById("ok").value;
+            if (exp.test(check1)) {
+                alert("ok");
+            } else {
+                alert("not ok");
+            }
         }
     </script>
 </body>
