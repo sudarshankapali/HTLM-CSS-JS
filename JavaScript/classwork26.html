@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expression
+
+    </title>
+</head>
+<body>
+    <input type="text" name="" id="ok">
+    <button onclick="check()">submit</button>
+    <script>
+        let exp = /^[?=*A-Z][?=*a-z][?=*0-9][?=**?/-]$/;
+        let check = document.getElementById("ok").value;
+        function check(){
+            if(exp.test(check)){
+            alert("ok");
+        }
+        else{
+            alert("not ok");
+        }
+        }
+    </script>
+</body>
+</html>
